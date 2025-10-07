@@ -52,18 +52,15 @@ body {
     transition: max-height 0.3s ease;
 }
 
-/* MEDIA QUERIES FOR HAMBURGER */
+/* NAV LINKS SLIDE DOWN ON MOBILE */
 @media (max-width: 480px) {
-    .hamburger {
-        display: flex;
-    }
-
     .nav-links {
         overflow: hidden;
         max-height: 0;
         flex-direction: column;
         width: 100%;
         background-color: rgba(0,0,0,0.9);
+        transition: max-height 0.4s ease; /* smooth animation */
         gap: 0;
     }
 
@@ -78,7 +75,7 @@ body {
     }
 
     .nav-links.active {
-        max-height: 500px; /* enough height to show all links */
+        max-height: 1000px; /* big enough to fit all links */
     }
 }
 

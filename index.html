@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
@@ -169,6 +170,16 @@
 <footer>
     <p>© 2025 Jaziz Omrick R. Corsino. All rights reserved.</p>
 </footer>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('open');
+    });
+</script>
 
 </body>
 </html>

@@ -30,6 +30,58 @@ body {
     flex-wrap: wrap;
 }
 
+/* HAMBURGER ICON */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* NAV LINKS SLIDE DOWN ON MOBILE */
+.nav-links {
+    transition: max-height 0.3s ease;
+}
+
+/* MEDIA QUERIES FOR HAMBURGER */
+@media (max-width: 480px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        overflow: hidden;
+        max-height: 0;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0,0,0,0.9);
+        gap: 0;
+    }
+
+    .nav-links li {
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav-links a {
+        padding: 12px 0;
+        display: block;
+    }
+
+    .nav-links.active {
+        max-height: 500px; /* enough height to show all links */
+    }
+}
+
 .brand {
     font-family: 'Oswald', sans-serif;
     font-size: 26px;
